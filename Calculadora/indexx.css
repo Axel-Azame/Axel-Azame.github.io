@@ -1,0 +1,109 @@
+*{
+    text-decoration: none;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+@keyframes animacionInicio {
+    from {width: 0.4px; border: #05284C solid;}
+    to {width: 210px; border: #39FB90 solid;}
+}
+@keyframes animacionLetras {
+    from {font-size: 30px;}
+    to {font-size: 30px; opacity: 1; padding-top: 20px;}
+}
+body {
+    background-color: #05284C;
+}
+#contenedor {
+    width: 99.5%;
+    height: 710px;
+}
+.fondoPagina {
+    left: 40%;
+    top: 11%;
+    display: inline-block;
+    color: white;
+    background-color: #05284C;
+    box-shadow: 10px 10px 500px black;
+    padding: 40px 60px;
+    border-radius: 15px;
+    margin: auto;
+    position: relative;
+    width: 215px;
+}
+#linkDeRegreso{
+    text-decoration: none;
+}
+#bordeVolver{
+    display: flex;
+    /* border: #39FB90 solid; */
+    color: white;
+}
+#volverCv{
+    padding: 0px 10px 10px 5px;
+    opacity: 0;
+}
+#flechaIzq{
+    padding: 10px 0 10px 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+ #flechaIzq:hover + #VolverCv{
+    animation-name: animacionLetras;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+#calculadora {
+    width: 50%;
+    margin-left: 350px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+.cuadroDeTextos{
+    border-radius: 100px;
+    width: 0px;
+    height: 50px;
+    border: #05284C solid;
+    color: white;
+    background-color: #05284C;
+    margin-top: 10px;
+}
+#primerNumero {
+    animation: animacionInicio 800ms ease;
+    animation-fill-mode: forwards;
+}
+#operador{
+    font-size: 25px;
+    animation: animacionInicio 800ms ease;
+    animation-delay: 400ms;
+    animation-fill-mode: forwards;
+}
+#segundoNumero {
+    animation: animacionInicio 800ms ease;
+    animation-delay: 800ms;
+    animation-fill-mode: forwards;
+}
+#resultado{
+    background-color: #05284C;
+    border-radius: 10px;
+    border: #39FB90 solid;
+    color: white;
+    width: 100px;
+    height: 25px;
+    position: absolute;
+    left: 110px;
+    transition:  800ms ease;
+}
+#resultado:hover {
+    width: 200px;
+    height: 25px;
+    position: absolute;
+    right: 80px;
+    background-color: #39FB90;
+    transform: scale(1.1);
+    left: 65px;   
+}
+input{
+    text-align: center;
+}
